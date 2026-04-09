@@ -1,4 +1,4 @@
-# IoTEdgeSense
+# IoTEdgeSense_PowerGrid_SDN
 
 **C++ IoT Data Acquisition and Processing firmware for constrained edge devices.**
 
