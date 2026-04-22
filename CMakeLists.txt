@@ -107,9 +107,12 @@ set(GRID_SOURCES
     src/Grid/power_grid_bridge.cpp
 )
 
+# ML sources — feature_extractor must come before predictive_maintenance
+# (predictive_maintenance depends on feature_extractor)
 set(ML_SOURCES "")
 if(IOT_ENABLE_ML)
     list(APPEND ML_SOURCES
+        src/ml/feature_extractor.cpp
         src/ml/onnx_inference.cpp
         src/ml/predictive_maintenance.cpp
     )
@@ -190,6 +193,7 @@ if(IOT_BUILD_TESTS)
             test_data_processor
             test_error_handler
             test_thermal_model
+            test_feature_extractor
             test_predictive_maintenance)
             if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/tests/unit/${test_target}.cpp")
                 add_executable(${test_target}
