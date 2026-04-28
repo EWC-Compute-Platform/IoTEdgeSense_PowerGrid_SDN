@@ -1,4 +1,4 @@
-# IoTEdgeSense_PowerGrid_SDN
+# Power Grid Edge Project
 
 **C++ IoT edge firmware + Python ML pipelines for software-defined power grid monitoring.**
 
